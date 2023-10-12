@@ -70,17 +70,19 @@ console.log('The final value in the array is:', getLast([4]));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find(value, array) {
-  for (i = 0; i < array.length; i++){
-    if(value === array[ i ]){
+  for (index = 0; index < array.length; index++){
+    console.log('Wow!')
+    if(array[ index ] == value){
+      console.log('The value is:', value);
+      console.log('The array is', array[ index ]);
       return true;
     }
-    else{
-      return false;
-    }
   }
+  return false;
 }
-console.log('Is the value in the array?', find(6, [6, 8, 7]));
+console.log('Is the value in the array?', find(6, [8, 6, 7]));
 console.log('Is the value in the array?', find(7, [8, 9, 10]));
 console.log('Is the value in the array?', find(68, [4, 77, 67, 456, 5, 9, 17, 38, 68, 62, 445]));
 
